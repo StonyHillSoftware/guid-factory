@@ -1,6 +1,6 @@
 {
   "name": "guid-factory",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Provides GUIDs via a factory class and supporting TypeScript typings",
   "scripts": {
     "test": "mocha -r ts-node/register */*.spec.ts",
@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/StonyHillSoftware/guid-factory/issues"
   },
-  "homepage": "https://github.com/StonyHillSoftware/guid-factory#readme",
+  "homepage": "https://stonyhillsoftware.com",
   "main": "./dist/Guid.js",
   "types": "./dist/Guid.d.ts",
   "devDependencies": {

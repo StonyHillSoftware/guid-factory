@@ -1,9 +1,9 @@
 # guid-factory
-Provides GUIDs via a factory class and supporting TypeScript typings.  
+Provides GUIDs via a `Guid` factory class and supporting `guid` TypeScript typing.  
 
-Unlike similar typescript GUID libraries, all generated values exist as  strings at run time, but are able to be strongly typed at build time due to the typescript flavoring.
+Unlike similar typescript GUID/UUID libraries, all generated values exist as  strings at run time, but still are able to be strongly-typed at build time due to the typescript flavoring.
 
-The benefit is that the `guid` typing needn't be instantiated, which plays nicer with server supplied values, as serialization/deserialzation from json isn't necessary.
+The benefit is that the `guid` typing needn't be instantiated as a new object, which plays nicer with server supplied values, as serialization/parsing from json isn't required.
 
 ## Installation
 `npm i guid-factory`
@@ -39,7 +39,7 @@ This library essentially marries two of the answers on this stack overflow quest
 ## License
 *MIT License*
 
-Copyright (c) 2021 Stony Hill Software LLC
+Copyright (c) 2021 [Stony Hill Software LLC](https://stonyhillsoftware.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
