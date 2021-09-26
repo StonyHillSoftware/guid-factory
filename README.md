@@ -1,11 +1,40 @@
 # guid-factory
-Provides GUIDs via a factory class and supporting TypeScript typings
+Provides GUIDs via a factory class and supporting TypeScript typings.  
+
+Unlike similar typescript GUID libraries, all generated values exist as  strings at run time, but are able to be strongly typed at build time due to the typescript flavoring.
+
+The benefit is that the `guid` typing needn't be instantiated, which plays nicer with server supplied values, as serialization/deserialzation from json isn't necessary.
 
 ## Installation
-`npm i @stonyhill/guid-factory`
+`npm i guid-factory`
 
 ## Usage
-Import or require `guid` and `Guid` from 'stonyhill/guid-factory'
+Import or require `guid` and `Guid` from 'guid-factory'
+
+    import { guid, Guid } from 'guid-factory'; // guid is the type, Guid is the factory
+    
+    const myId: guid = Guid.newGuid();
+    
+    const isValid = Guid.isValid(myId);
+
+    '00000000-0000-0000-0000-000000000000' === Guid.empty() // true
+
+## Guid class members
+
+|Member     |Description 
+|---        |---
+|newGuid()  |Generates a random, hyphenated **guid** value
+|empty()    |Generates a new **guid**, with the empty/least possible value
+|full()     |Generates a new **guid**, with the full/greatest possible value
+|isEmpty()  |Evaluates whether the supplied **guid** is equal to the empty/least possible value
+|isFull()   |Evaluates whether the supplied *guid* is equal to the empty/greatest possible value
+|isValid()  |Evaluates whether the supplied value is a valid **guid**
+
+
+## Attribution
+This library essentially marries two of the answers on this stack overflow question: https://stackoverflow.com/questions/49432350/how-to-represent-guid-in-typescript
+
+
 
 ## License
 *MIT License*
