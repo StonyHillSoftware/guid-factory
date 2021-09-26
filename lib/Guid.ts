@@ -39,9 +39,9 @@ export class Guid {
   static empty = (): guid => '00000000-0000-0000-0000-000000000000';
 
   /** Generates a new **guid**, with the full/greatest possible value
-   * @returns {guid} ffffffff-ffff-ffff-ffffffffffff
+   * @returns {guid} ffffffff-ffff-ffff-ffff-ffffffffffff
    */
-  static full = (): guid => 'ffffffff-ffff-ffff-ffffffffffff';
+  static full = (): guid => 'ffffffff-ffff-ffff-ffff-ffffffffffff';
 
   /** Evaluates whether the supplied **guid** is equal to the empty/least possible value */
   static isEmpty = (value: guid) => value === Guid.empty();
