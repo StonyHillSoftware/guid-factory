@@ -1,0 +1,35 @@
+{
+  "name": "guid-factory",
+  "version": "1.0.1",
+  "description": "Provides GUIDs via a factory class and supporting TypeScript typings",
+  "scripts": {
+    "test": "mocha -r ts-node/register tests/*.spec.ts",
+    "build": "npx tsc lib/Guid -t es3 -m commonjs -d --outDir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StonyHillSoftware/guid-factory.git"
+  },
+  "keywords": [
+    "guid",
+    "typescript",
+    "guidfactory"
+  ],
+  "author": "David Lee Perish",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StonyHillSoftware/guid-factory/issues"
+  },
+  "homepage": "https://github.com/StonyHillSoftware/guid-factory#readme",
+  "main": "./dist/Guid.js",
+  "types": "./dist/Guid.d.ts",
+  "devDependencies": {
+    "@types/chai": "^4.1.0",
+    "@types/mocha": "^8.2.0",
+    "@types/node": "^16.0.0",
+    "chai": "^4.1.2",
+    "mocha": "^9.0.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.1.5"
+  }
+}
