@@ -27,7 +27,7 @@ Import or require `guid` and `Guid` from 'guid-factory'
 |empty()    |Generates a new **guid**, with the empty/least possible value
 |full()     |Generates a new **guid**, with the full/greatest possible value
 |isEmpty()  |Evaluates whether the supplied **guid** is equal to the empty/least possible value
-|isFull()   |Evaluates whether the supplied *guid* is equal to the empty/greatest possible value
+|isFull()   |Evaluates whether the supplied **guid** is equal to the full/greatest possible value
 |isValid()  |Evaluates whether the supplied value is a valid **guid**
 
 
