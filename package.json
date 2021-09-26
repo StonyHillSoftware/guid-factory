@@ -1,6 +1,6 @@
 {
   "name": "guid-factory",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Provides GUIDs via a factory class and supporting TypeScript typings",
   "scripts": {
     "test": "mocha -r ts-node/register */*.spec.ts",
