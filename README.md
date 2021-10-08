@@ -1,4 +1,4 @@
-# guid-factory
+# guid-factory [![Build Status](https://app.travis-ci.com/StonyHillSoftware/guid-factory.svg?branch=main)](https://app.travis-ci.com/StonyHillSoftware/guid-factory)
 Provides GUIDs via a `Guid` factory class and supporting `guid` TypeScript typing.  
 
 Unlike similar typescript GUID/UUID libraries, all generated values exist as  strings at run time, but still are able to be strongly-typed at build time due to the typescript flavoring.
