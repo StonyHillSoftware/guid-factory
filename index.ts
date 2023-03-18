@@ -1,1 +1,1 @@
-export { guid, Guid } from './dist/Guid';
+export { guid, Guid } from './lib/Guid';
