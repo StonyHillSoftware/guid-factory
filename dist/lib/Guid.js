@@ -40,9 +40,9 @@ var Guid = /** @class */ (function () {
      */
     Guid.empty = function () { return '00000000-0000-0000-0000-000000000000'; };
     /** Generates a new **guid**, with the full/greatest possible value
-     * @returns {guid} ffffffff-ffff-ffff-ffffffffffff
+     * @returns {guid} ffffffff-ffff-ffff-ffff-ffffffffffff
      */
-    Guid.full = function () { return 'ffffffff-ffff-ffff-ffffffffffff'; };
+    Guid.full = function () { return 'ffffffff-ffff-ffff-ffff-ffffffffffff'; };
     /** Evaluates whether the supplied **guid** is equal to the empty/least possible value */
     Guid.isEmpty = function (value) { return value === Guid.empty(); };
     /** Evaluates whether the supplied *guid* is equal to the empty/greatest possible value */

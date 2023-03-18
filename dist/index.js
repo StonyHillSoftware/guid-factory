@@ -8,5 +8,5 @@ var __createBinding = (this && this.__createBinding) || (Object.create ? (functi
 }));
 exports.__esModule = true;
 exports.Guid = void 0;
-var Guid_1 = require("./dist/Guid");
+var Guid_1 = require("./lib/Guid");
 __createBinding(exports, Guid_1, "Guid");
