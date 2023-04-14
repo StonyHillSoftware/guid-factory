@@ -24,14 +24,11 @@ export class Guid {
   );
 
   /** Generates a random, hyphenated **guid** value */
-  static newGuid = (): guid =>
-    [
-      Guid.generateGuidSegment(2),
-      Guid.generateGuidSegment(1),
-      Guid.generateGuidSegment(1),
-      Guid.generateGuidSegment(1),
-      Guid.generateGuidSegment(3),
-    ].join('-');
+  static newGuid(): guid { 
+    const segments = this.generateGuidSegments();
+    return `${segments[0]}${segments[1]}-${segments[2]}-${segments[3]}-${segments[4]}-${segments[5]}${segments[6]}${segments[7]}`;
+  }
+
 
   /** Generates a new **guid**, with the empty/least possible value
    * @returns {guid} 00000000-0000-0000-0000-000000000000
@@ -67,6 +64,20 @@ export class Guid {
     
     return out;
   }
+
+  private static generateGuidSegments(count: number = 8): Array<string> {
+    let segments = new Array<string>(count);
+
+    for (let i = 0; i < count; i++) {
+      // tslint:disable-next-line:no-bitwise
+      segments[i] = (((1 + Math.random()) * 0x10000) | 0)
+        .toString(16)
+        .substring(1);
+    }
+
+    return segments;    
+  }
+
 }
 
 // #endregion

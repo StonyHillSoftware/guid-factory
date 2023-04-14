@@ -12,8 +12,16 @@
   },
   "keywords": [
     "guid",
+    "uuid",
     "typescript",
-    "guidfactory"
+    "javascript",
+    "guidfactory",
+    "typing",
+    "parser",
+    "generator",
+    "react",
+    "angular",
+    "next"
   ],
   "author": "David Lee Perish",
   "license": "MIT",
