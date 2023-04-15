@@ -29,7 +29,6 @@ export class Guid {
     return `${segments[0]}${segments[1]}-${segments[2]}-${segments[3]}-${segments[4]}-${segments[5]}${segments[6]}${segments[7]}`;
   }
 
-
   /** Generates a new **guid**, with the empty/least possible value
    * @returns {guid} 00000000-0000-0000-0000-000000000000
    */
@@ -47,23 +46,14 @@ export class Guid {
   static isFull = (value: guid) => value === Guid.full();
 
   /** Evaluates whether the supplied value is a valid **guid** */
-  static isValid = (value: string | guid): boolean =>
-    Guid.validator.test(value.toLowerCase());
+  static isValid(value: string | guid): boolean {
+    if (value.length === 0) return false;
 
-  /** Generates a specified number of double-byte segements for **guid** generation  */
-  private static generateGuidSegment(count: number): string {
-    let out = '';
-
-    for (let i = 0; i < count; i++) {
-      // tslint:disable-next-line:no-bitwise
-      out += (((1 + Math.random()) * 0x10000) | 0)
-        .toString(16)
-        .substring(1)
-        .toLowerCase();
-    }
+    let trimmedValue = value.trim();
+    if (trimmedValue.length < 32 && trimmedValue.length > 36) return false;
     
-    return out;
-  }
+    return Guid.validator.test(value);
+  };
 
   private static generateGuidSegments(count: number = 8): Array<string> {
     let segments = new Array<string>(count);
@@ -72,7 +62,7 @@ export class Guid {
       // tslint:disable-next-line:no-bitwise
       segments[i] = (((1 + Math.random()) * 0x10000) | 0)
         .toString(16)
-        .substring(1);
+        .slice(1);
     }
 
     return segments;    

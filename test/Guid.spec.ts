@@ -35,4 +35,14 @@ describe("Guid", () => {
         const badGuid = "12-345-6789";
         expect(Guid.isValid(badGuid)).equal(false);
     });
+
+    it("Should not validate a empty GUID", () => {
+        const badGuid = "";
+        expect(Guid.isValid(badGuid)).equal(false);
+    });
+
+    it("Should not validate a blank GUID", () => {
+        const badGuid = "                                ";
+        expect(Guid.isValid(badGuid)).equal(false);
+    });
 });

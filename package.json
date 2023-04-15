@@ -1,10 +1,10 @@
 {
   "name": "guid-factory",
-  "version": "1.2.0",
-  "description": "Provides GUIDs via a factory class and supporting TypeScript typings",
+  "version": "2.0.0",
+  "description": "Creates, parses and validates both string-based & strongly-typed GUIDs via a factory class",
   "scripts": {
     "test": "mocha -r ts-node/register */*.spec.ts",
-    "build": "npx tsc index -t es3 -m commonjs -d --outDir dist"
+    "build": "npx tsc index -t es2015 -m commonjs -d --outDir dist"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,6 @@
     "chai": "^4.1.2",
     "mocha": "^9.0.0",
     "ts-node": "^10.0.0",
-    "typescript": "^4.1.5"
+    "typescript": "^5.0.4"
   }
 }
