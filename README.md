@@ -5,31 +5,6 @@ Unlike similar typescript GUID/UUID libraries, all generated values exist as  st
 
 The benefit is that the `guid` typing needn't be instantiated as a new object, which plays nicer with server supplied values, as serialization/parsing from json isn't required.
 
-## Performance
-Tested on a Surface Laptop 4 R7
-| Method       | Iterations | Duration |
-|--------------|------------|----------|
-| `newGuid()`  | 1,000,000  | 806ms    | 
-| `newGuid()`  | 100,000    | 85ms     | 
-| `newGuid()`  | 10,000     | 7ms      | 
-| `validate()` | 1,000,000  | 2375ms   | 
-| `validate()` | 100,000    | 242ms    | 
-| `validate()` | 10,000     | 33ms     | 
-
-## Version History
-- 2.0.0
-    - Drop support for ES3, now targeting ES2015 (ES6)
-        - For supported browsers see:  https://caniuse.com/es6
-    - Updated to TypeScript 5.0.4
-    - 40% better performance with `Guid.newGuid()` and `Guid.validate()`
-    - Add additional tests for empty/blank input strings on `Guid.validate()`
-- 1.2.0
-    - Fix drift between src and dist folders, specific to the 'full' factory method
-- 1.1.0
-    - Added tests
-    - Fixed bugs
-    - Integrated CI Build/Test vis Travis CI
-
 ## Installation
 `npm i guid-factory`
 
@@ -56,6 +31,32 @@ Import or require `guid` and `Guid` from 'guid-factory'
 |isValid()  |Evaluates whether the supplied value is a valid **guid**
 
 
+
+## Performance
+Tested on a Surface Laptop 4 R7
+| Method       | Iterations | Duration |
+|--------------|------------|----------|
+| `newGuid()`  | 1,000,000  | 806ms    | 
+| `newGuid()`  | 100,000    | 85ms     | 
+| `newGuid()`  | 10,000     | 7ms      | 
+| `validate()` | 1,000,000  | 2375ms   | 
+| `validate()` | 100,000    | 242ms    | 
+| `validate()` | 10,000     | 33ms     | 
+
+## Version History
+- 2.0.0
+    - Drop support for ES3, now targeting ES2015 (ES6)
+        - For supported browsers see:  https://caniuse.com/es6
+    - Updated to TypeScript 5.0.4
+    - 40% better performance with `Guid.newGuid()` and `Guid.validate()`
+    - Add additional tests for empty/blank input strings on `Guid.validate()`
+- 1.2.0
+    - Fix drift between src and dist folders, specific to the 'full' factory method
+- 1.1.0
+    - Added tests
+    - Fixed bugs
+    - Integrated CI Build/Test vis Travis CI
+
 ## Attribution
 This library essentially marries two of the answers on this stack overflow question: https://stackoverflow.com/questions/49432350/how-to-represent-guid-in-typescript
 
@@ -64,7 +65,7 @@ This library essentially marries two of the answers on this stack overflow quest
 ## License
 *MIT License*
 
-Copyright (c) 2021 [Stony Hill Software LLC](https://stonyhillsoftware.com)
+Copyright (c) 2021-2023 [Stony Hill Software LLC](https://stonyhillsoftware.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
